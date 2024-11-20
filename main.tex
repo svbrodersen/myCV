@@ -1,10 +1,3 @@
-%-------------------------
-% Resume in Latex
-% Author : Matty
-% Based on: https://github.com/jakegut/resume (which was itself based on https://github.com/sb2nov/resume)
-% License : MIT
-%------------------------
-
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
@@ -14,7 +7,7 @@
 \usepackage{verbatim}
 \usepackage{fullpage}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
@@ -22,12 +15,11 @@
 \usepackage{fontawesome5}
 \usepackage{newclude}
 
-\input{glyphtounicode}
 
 % -------------------- FONT OPTIONS --------------------
 % sans-serif
 % \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
+\usepackage[sfdefault]{noto-sans}
 % serif
 % \usepackage{charter}
 
@@ -52,7 +44,7 @@
 
 % Section formatting
 \titleformat{\section}{
-  \vspace{-5pt}\scshape\raggedright\large
+  \vspace{-5pt}\scshape\raggedright\Large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Subsection formatting
@@ -60,8 +52,6 @@
   \vspace{-4pt}\scshape\raggedright\large
 }{\hspace{-.15in}}{0em}{}[\color{black}\vspace{-8pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
 
 % -------------------- CUSTOM COMMANDS --------------------
 \newcommand{\resumeItem}[1]{
@@ -107,39 +97,39 @@
 
 % -------------------- HEADING--------------------
 \begin{flushright}
-  % \vspace{-4pt}
-  \color{gray}
-  \item
-  Last Updated on January 12th, 2024
+	% \vspace{-4pt}
+	\color{gray}
+	\item
+	Last Updated on \today.
 \end{flushright}
 
 \vspace{-5pt}
 
 \begin{center}
-    \textbf{\Huge Simon Vinding Brodersen} \\ \vspace{8pt}
-    \small
-    \faIcon{github}
-    \href{https://github.com/svbrodersen}{\underline{github.com/svbrodersen}} $  $
-    \faIcon{linkedin}
-    \href{ https://www.linkedin.com/in/simon-vinding-brodersen/ }{\underline{linkedin.com/in/simon-vinding-brodersen}} $  $
-    \faIcon{envelope}
-    \href{mailto:simon@3450.dk}
-    {\underline{simon@3450.dk}}
+	\textbf{\Huge Simon Vinding Brodersen} \\ \vspace{8pt}
+	\small
+	\faIcon{github}
+	\href{https://github.com/svbrodersen}{\underline{github.com/svbrodersen}} $  $
+	\faIcon{linkedin}
+	\href{https://www.linkedin.com/in/simon-vinding-brodersen/}{\underline{linkedin.com/in/simon-vinding-brodersen}} $  $
+	\faIcon{envelope}
+	\href{mailto:simon@3450.dk}
+	{\underline{simon@3450.dk}}
+  \faIcon{mobile}
+  +45 42441209
 \end{center}
 
 \section{About me}
-\include*{about_me}
+\input{about_me}
 
 \section{Education}
-\include*{education}
-
-\section{Skills}
-\include*{skills}
+\input{education}
 
 \section{Experience}
-\include*{experience}
+\input{experience}
 
-\section{Projects}
-\include*{projects}
+\section{Skills}
+\input{skills}
 
 \end{document}
+
